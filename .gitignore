@@ -1,2 +1,4 @@
-.v_cnn/*
+.v*/*
 **/__pycache__/*
+data/*
+doc/*
