@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "thl-cgms"
+version = "1.0.0"
+description = "CGMS data analysis & prediction."
+authors = ["Tyler H. S. Lee <tylerhslee@gmail.com>"]
+maintainers = [
+    # ...
+]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+packages = [{ include = "cgms", from = "src" }]
+include = [{ path = "tests", format = "sdist" }]
+# homepage = ...
+repository = "https://github.com/tylerhslee/ppgr-data-engineering"
+# documentation = ...
+keywords = ["health", "cgms", "neuralnet"]
+classifiers = [
+    # ...
+]
+
+[tool.poetry.urls]
+# Changelog = ...
+
+# Requirements
+[tool.poetry.dependencies]
+python = "^3.11.3"
+pandas = "^2.0.1"
+pydantic = "^1.10.7"
+openpyxl = "^3.1.2"
+
+[tool.poetry.group.dev.dependencies]
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.1"
+pytest-mock = "^3.9"
+
+[tool.poetry.group.typing.dependencies]
+
+# only used in github actions
+[tool.poetry.group.github-actions]
+# optional = true
+
+[tool.poetry.group.github-actions.dependencies]
+# pytest-github-actions-annotate-failures = "^0.1.7"
+
+[tool.poetry.scripts]
+cgms = "cgms.main:app"
+
+[tool.pytest.ini_options]
+# addopts = "-n auto"
+# testpaths = ["tests"]
+
+# [tool.coverage.report]
+# exclude_lines = [
+#     "pragma: no cover",
+#     "if TYPE_CHECKING:"
+# ]

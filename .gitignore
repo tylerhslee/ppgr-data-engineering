@@ -2,3 +2,7 @@
 **/__pycache__/*
 data/*
 doc/*
+.DS_Store
+*.lock
+dist/*
+
